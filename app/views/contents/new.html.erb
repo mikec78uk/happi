@@ -1,0 +1,161 @@
+            <% if flash[:success].present? %>
+                      <div data-alert class="home-flashsuccess">
+                        <h4><%= flash[:success] %></h4>
+                      </div>
+            <% end %>
+
+            <% if flash[:error].present? %>
+                      <div data-alert class="home-flashfail">
+                        <h4><%= flash[:error] %></h4>
+                      </div>
+            <% end %>
+
+
+
+        <div class="templatemo-top-bar" id="templatemo-top">
+        </div>
+        <div class="templatemo-top-menu">
+            <div class="container">
+                <!-- Static navbar -->
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                </button>
+                                <a rel="nofollow" href="#" class="navbar-brand"><%= image_tag ("templatemo_logo.png") %></a>
+                        </div>
+                        <div class="navbar-collapse collapse" id="templatemo-nav-bar">
+                            <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
+                                <li class="active"><a href="#templatemo-top">HOME</a></li>
+                                <li><a href="#templatemo-about">ABOUT</a></li>
+                                <li><a href="#templatemo-contact">CONTACT</a></li>
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div><!--/.container-fluid -->
+                </div><!--/.navbar -->
+            </div> <!-- /container -->
+        </div>
+        
+        <div>
+            <!-- Carousel -->
+            <div id="templatemo-carousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+
+                <!--<a class="left carousel-control" href="#templatemo-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#templatemo-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
+            </div><!-- /#templatemo-carousel -->
+        </div>
+
+        <div class="templatemo-welcome" id="templatemo-about">
+            <div class="container">
+                <div class="templatemo-slogan text-center">
+                    <span class="txt_darkgrey">As the world gets smaller,</span><span class="txt_orange"> the opportunities get bigger</span>
+                    <p class="txt_slogan"><i>We take the hassle out of importing from China. It doesn't have to be difficult.</i></p>
+                </div>  
+            </div>
+        </div>
+        
+        <div class="templatemo-service">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="templatemo-service-item">
+                            <div>
+                                <%= image_tag ("leaf.png") %>
+                                <span class="templatemo-service-item-header">SOURCING</span>
+                            </div>
+                            <p>In China, you can find suppliers of almost everything imaginable. Yet finding the right supplier is not as easy as it seems. We have the experience and the knowledge of the best factories in China, so working with us is fast, safe, and easy.</p>
+                            <br class="clearfix"/>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="templatemo-service-item" >
+                            <div>
+                                <%= image_tag ("mobile.png") %>
+                                <span class="templatemo-service-item-header">DEVELOPMENT</span>
+                            </div>
+              <p>Developing a product can be a tedious and time consuming process for anyone. We take the headache out of that process by putting you in the drivers seat with the best designers we know.</p>
+                            <br class="clearfix"/>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="templatemo-service-item">
+                            <div>
+                                <%= image_tag ("battery.png") %>
+                                <span class="templatemo-service-item-header">LOGISTICS</span>
+                            </div>
+                            <p>We help with every aspect of getting your goods from the factory floor in China – right to your door. There is no need to worry about customs clearance, tax, insurance, duty, import permits and quarantine, we take care of it all for you.</p>
+                            <br class="clearfix"/>
+                        </div>
+                        <br class="clearfix"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+            <div class="container" id="templatemo-contact">
+                <div class="row">
+
+
+
+                    <div class="col-md-8">
+                        <div class="templatemo-contact-map" id="map-canvas"> </div>  
+                              <div class="clearfix"></div>
+                            <i>We're based in Rugby, Warwickshire in the <span class="txt_orange">United Kingdom</span>.</i>
+                        </div>  
+                        
+                    
+                    <div class="col-md-4 contact_right">
+                        <h4>Get in touch</h4>
+                        <p>We're happy to help</p>
+
+                        <div class="form-horizontal" action="#">
+
+                            <%= simple_form_for @content, defaults: {input_html: {class: 'form-control'}} do |form| %>
+        
+                                    <div class="form-group">
+                                        <%= form.input :name, placeholder: "Your Name...", label: false%>
+                                    </div>
+                                    <div class="form-group">
+                                        <%= form.input :email, placeholder: "Your Email...", label: false%>
+                                    </div>
+                                    <div class="form-group">
+                                        <%= form.input :message, placeholder: "How can we help...", label: false, input_html: {class: 'height130'}%>
+                                    </div>                        
+                                    
+                                    <%= form.button :submit, "SEND", class: 'btn btn-orange pull-right',  data: { disable_with: "SENDING" }%>
+                                
+                            <% end %>
+
+                        </div>
+                          
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /#templatemo-contact -->
+
+
+
+        <div class="templatemo-footer" >
+            <div class="container">
+                <div class="row">
+                    <div class="text-center">
+
+                        <div class="footer_container">
+                        <div class="footer_bottom_content">Happi Limited | Registered in England and Wales No: XXXXXXX </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
