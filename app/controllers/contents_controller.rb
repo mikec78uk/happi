@@ -16,7 +16,7 @@ def create
 	if @content.save
 		ContactMailer.contact_request(@content).deliver
 		flash[:success] = "Your message has been sent. We'll be in touch soon"
-		redirect_to new_content_path
+		redirect_to root_path
 	else
 		flash[:error] = "Sorry, there was a problem. Please try sending your message again"
 		render "new"
