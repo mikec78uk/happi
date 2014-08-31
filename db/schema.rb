@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140808114439) do
+ActiveRecord::Schema.define(version: 20140829155256) do
 
   create_table "contents", force: true do |t|
     t.datetime "created_at"
@@ -19,6 +19,22 @@ ActiveRecord::Schema.define(version: 20140808114439) do
     t.string   "name"
     t.string   "email"
     t.text     "message"
+  end
+
+  create_table "coupons", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "coupon_code"
+    t.boolean  "assigned"
+  end
+
+  create_table "emails", force: true do |t|
+    t.string   "email"
+    t.integer  "coupon_id"
+    t.boolean  "coupon_sent"
+    t.boolean  "review_request_sent"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

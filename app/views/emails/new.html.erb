@@ -1,0 +1,42 @@
+<% @page_title = 'Save 86% on JavaScript Fridge Magnet at Amazon' %>
+
+<h1>We'd love you to test and review our product on Amazon.co.uk</h1>
+
+
+  	<h2>JavaScript Fridge Magnets</h2>
+		<h3>Get them for only £1.50</h3>
+		<p>Normally <del>£10.99</del> <strong>You save £9.49, that's a saving of 86%!!</strong></p>
+		<p>This is a special Facebook to Amazon giveaway deal to promote our newest product</p>
+		<h3>What do I need to do?</h3>
+		<ol>
+			<li>Enter your email address to get your voucher code</li>
+			<li>Order on Amazon and leave us a product review</li>
+		</ol>
+		<p>We welcome all feedback</p>
+
+		<div>
+
+			<% if @coupon_count <= 0 %>
+
+				<p>We're sorry all the vouchers have gone</p>
+			
+			<%else%>
+			
+				<p> Only <span class="red"><%= pluralize @coupon_count, "voucher" %> left</span>, get yours before they're all gone</p>
+				<%= simple_form_for @email, defaults: {input_html: {class: 'form-control'}} do |form| %>
+				        
+				<div class="form-group">
+				    <%= form.input :email, placeholder: "Enter your email address", label: false%>
+				</div>
+
+				<%= form.button :submit, "Get your Amazon Voucher Code", class: 'btn btn-orange pull-right',  data: { disable_with: "Just getting it now" }%>
+
+				<% end %>
+				<p>Your voucher code will be instantly sent to your email address. Limit 1 per person.</p>
+			<%end%>
+		</div>
+
+
+
+
+
