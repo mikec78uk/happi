@@ -6,20 +6,23 @@
 
     <title><%= @page_title %> | Happi</title>
 
-
+    <%= stylesheet_link_tag    "foundation_and_overrides" %>
+     <%= stylesheet_link_tag    "coupons" %>
     <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+    
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
 
     <%= yield %>
-        <%= javascript_include_tag "jquery.min" %>
+<!--    <%= javascript_include_tag "jquery.min" %>
         <%= javascript_include_tag "bootstrap.min.js" %>
         <%= javascript_include_tag "stickUp.min.js" %>
         <%= javascript_include_tag "colorbox/jquery.colorbox-min.js" %>
-       <%= javascript_include_tag "templatemo_script.js" %>
+       <%= javascript_include_tag "templatemo_script.js" %> -->
 
     </body>
 </html>

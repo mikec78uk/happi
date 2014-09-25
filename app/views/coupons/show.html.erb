@@ -1,9 +1,54 @@
 <% @page_title = 'Congratulations, heres your Amazon voucher' %>
-<h3>Your Amazon Coupon Code is:</h3>
-<h1><%= @coupon.coupon_code %></h1>
-<h2>How to use your Amazon Coupon Code</h2>
-<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Sed posuere consectetur est at lobortis.</p>
+<div class="grey_line_bottom">
+  <h4>We'd love you to test and review our product on <%= image_tag ("amazon.png"), :class => "img_amazon" %></h4>
+</div>
+<div class="row">
+  <div class="large-6 columns"><%= image_tag ("placeholder-packing.png"), :class => "img_packaging" %></div>
+  <div class="large-6 columns">
 
-<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+  	  	<h2>JavaScript Fridge Magnets</h2>
+		<h3>Get them for <strong class="saving_red">only £1.50</strong></h3>
+		<p>Normally <del>£10.99</del> <strong><span class="saving_red">You save £9.49, that's a saving of 86%!!</span></strong></p>
+		<p class="footnote_text">This is a special Facebook to Amazon giveaway deal to promote our newest product</p>
 
-<p>Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus.</p>
+
+		<div class="voucher_box">
+			<!-- This is the email Entry Form -->
+				<h3>Your Amazon Coupon Code is:</h3>
+				<h1><%= @coupon.coupon_code %></h1>
+				<a href="http://www.amazon.co.uk" class="button btn btn-orange pull-right" target="_blank">Go to Amazon now</a>
+			<!-- end -->
+		</div>
+		<p class="footnote_text">Your voucher code will be instantly sent to your email address. <br>Limit 1 per person.</p>
+
+	  </div>
+</div>
+
+
+
+
+<div class="instructions footnote_text">
+			<h5 class="text-center">How to claim your ridiculously big saving</h5>
+
+	<div class="row">
+		<div class="large-3 columns">
+			<%= image_tag ("step-1-email.png") %>
+			<p class="small_text"><strong>Step 1:</strong><br>Enter your email address above to claim your voucher</p>
+		</div>
+
+		<div class="large-3 columns">
+			<p class="small_text"><strong>Step 2:</strong><br>Get your Amazon.co.uk Voucher code for the JavaScript Fridge Magnets</p>
+		</div>
+
+		<div class="large-3 columns">
+			<%= image_tag ("step-4-code.png") %>
+			<p class="small_text"><strong>Step 3:</strong><br>Use your voucher code when you checkout on Amazon.co.uk to recieve your discount. <br>Look for the <strong><i>Gift cards &amp; promotional codes</i></strong> field on the <i>Review your order</i> page</p>
+		</div>
+
+		<div class="large-3 columns">
+			<%= image_tag ("step-4-review.png") %>
+			<p class="small_text"><strong>Step 4:</strong><br>Leave a product review. <br>We welcome all feedback</p>
+		</div>
+	</div>
+
+</div>

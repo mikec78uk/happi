@@ -1,3 +1,69 @@
 // Place all the styles related to the coupons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.grey_line_bottom {
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #ededed;
+	padding: 10px 0px 5px 0px;
+	margin-bottom: 10px;
+	
+}
+
+.img_amazon {
+	margin-right: 6px;
+    position: relative;
+    top: 5px
+}
+
+.img_packaging {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 0px;
+}
+
+.saving_red {
+	color: #c21726;
+}
+
+.orange_text {
+	color: #fc9a1a;
+}
+
+.email_box {
+	background-color: #ededed;
+	padding: 20px 20px 10px 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.voucher_box {
+	background-color: #fffdc5;
+	padding: 20px 20px 10px 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.footnote_text, .instructions li, .instructions p {
+	font-size: 14px;
+}
+
+.instructions {
+	border-top: 1px solid #ededed;
+	font-size: 14px;
+	padding: 20px 0;
+	margin-top: 20px;
+	background-color: #ededed;
+}
+
+.text-center {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.small_text {
+	font-size: 14px;
+	margin-top: 20px;
+}

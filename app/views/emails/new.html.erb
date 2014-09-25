@@ -1,40 +1,76 @@
 <% @page_title = 'Save 86% on JavaScript Fridge Magnet at Amazon' %>
 
-<h1>We'd love you to test and review our product on Amazon.co.uk</h1>
+<div class="grey_line_bottom">
+  <h4>We'd love you to test and review our product on <%= image_tag ("amazon.png"), :class => "img_amazon" %></h4>
+</div>
+<div class="row">
+  <div class="large-6 columns"><%= image_tag ("placeholder-packing.png"), :class => "img_packaging" %></div>
+  <div class="large-6 columns">
+
+  	  	<h2>JavaScript Fridge Magnets</h2>
+		<h3>Get them for <strong class="saving_red">only £1.50</strong></h3>
+		<p>Normally <del>£10.99</del> <strong><span class="saving_red">You save £9.49, that's a saving of 86%!!</span></strong></p>
+		<p class="footnote_text">This is a special Facebook to Amazon giveaway deal to promote our newest product</p>
 
 
-  	<h2>JavaScript Fridge Magnets</h2>
-		<h3>Get them for only £1.50</h3>
-		<p>Normally <del>£10.99</del> <strong>You save £9.49, that's a saving of 86%!!</strong></p>
-		<p>This is a special Facebook to Amazon giveaway deal to promote our newest product</p>
-		<h3>What do I need to do?</h3>
-		<ol>
-			<li>Enter your email address to get your voucher code</li>
-			<li>Order on Amazon and leave us a product review</li>
-		</ol>
-		<p>We welcome all feedback</p>
+		<div class="email_box">
+			<!-- This is the email Entry Form -->
+				<% if @coupon_count <= 0 %>
 
-		<div>
+					<p class="saving_red">We're sorry all the vouchers have gone</p>
+				
+				<%else%>
+				
+					<p> Only <span class="saving_red"><%= pluralize @coupon_count, "voucher" %> left</span>, get yours before they're all gone</p>
+					<%= simple_form_for @email, defaults: {input_html: {class: 'form-control'}} do |form| %>
+					        
+					<div class="form-group">
+					    <%= form.input :email, placeholder: "Enter your email address", label: false%>
+					</div>
 
-			<% if @coupon_count <= 0 %>
+					<%= form.button :submit, "Get your Amazon Voucher Code", class: 'btn btn-orange pull-right',  data: { disable_with: "Just getting it now" }%>
 
-				<p>We're sorry all the vouchers have gone</p>
-			
-			<%else%>
-			
-				<p> Only <span class="red"><%= pluralize @coupon_count, "voucher" %> left</span>, get yours before they're all gone</p>
-				<%= simple_form_for @email, defaults: {input_html: {class: 'form-control'}} do |form| %>
-				        
-				<div class="form-group">
-				    <%= form.input :email, placeholder: "Enter your email address", label: false%>
-				</div>
-
-				<%= form.button :submit, "Get your Amazon Voucher Code", class: 'btn btn-orange pull-right',  data: { disable_with: "Just getting it now" }%>
-
-				<% end %>
-				<p>Your voucher code will be instantly sent to your email address. Limit 1 per person.</p>
-			<%end%>
+					<% end %>
+					
+				<%end%>
+			<!-- end -->
 		</div>
+		<p class="footnote_text">Your voucher code will be instantly sent to your email address. <br>Limit 1 per person.</p>
+
+		
+
+
+
+
+  </div>
+</div>
+
+<div class="instructions footnote_text">
+			<h5 class="text-center">How to claim your ridiculously big saving</h5>
+</div>
+	<div class="row">
+		<div class="large-3 columns">
+			<%= image_tag ("step-1-email.png") %>
+			<p class="small_text"><strong>Step 1:</strong><br>Enter your email address above to claim your voucher</p>
+		</div>
+
+		<div class="large-3 columns">
+			<p class="small_text"><strong>Step 2:</strong><br>Get your Amazon.co.uk Voucher code for the JavaScript Fridge Magnets</p>
+		</div>
+
+		<div class="large-3 columns">
+			<%= image_tag ("step-4-code.png") %>
+			<p class="small_text"><strong>Step 3:</strong><br>Use your voucher code when you checkout on Amazon.co.uk to recieve your discount. <br>Look for the <strong><i>Gift cards &amp; promotional codes</i></strong> field on the <i>Review your order</i> page</p>
+		</div>
+
+		<div class="large-3 columns">
+			<%= image_tag ("step-4-review.png") %>
+			<p class="small_text"><strong>Step 4:</strong><br>Leave a product review. <br>We welcome all feedback</p>
+		</div>
+	</div>
+
+
+
 
 
 

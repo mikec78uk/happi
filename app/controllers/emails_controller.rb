@@ -26,12 +26,13 @@ def create
 	@email.coupon_id = @coupon.id
 
 	if @email.save
-
+		#Need to send whole record through not just the id to create harder to hack urls
+		@this_coupon = Coupon.find(@email.coupon_id)
+		
 		# Send coupon email
-
+		CouponMailer.send_coupon(@email).deliver
 		# Display Coupon view page
-		redirect_to coupon_path(@email.coupon_id)
-
+		redirect_to coupon_path(@this_coupon)
 	else
 		@coupon_count = Coupon.where('assigned = ? OR assigned IS ?', false, nil).count
 		render "new"
