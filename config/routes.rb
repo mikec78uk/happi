@@ -11,8 +11,8 @@ ImportSite::Application.routes.draw do
 
 
 
- #root "contents#new"
- root "emails#new"
+ root "contents#new"
+ #root "emails#new"
 
  
 end
