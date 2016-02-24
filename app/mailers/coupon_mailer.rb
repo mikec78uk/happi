@@ -1,5 +1,6 @@
 class CouponMailer < ActionMailer::Base
-  default from: "no-reply@veryhappi.com"
+  default 	from: "no-reply@veryhappi.com",
+  			reply_to: "mikefromhappi@gmail.com"
   
   
   
@@ -9,13 +10,14 @@ class CouponMailer < ActionMailer::Base
   	mail to: @email.email, subject: "Your Amazon Voucher for JavaScipt Fridge Magnets"  
   end
   
- # def test_complete(test)
- # 	@test = test
-  	
-#  	@user = @test.user  
+
+  def review_request_email(email)
+  	@email = email
   
-#  	mail to: @user.email, subject: "Your final mojoleaf results are ready"
-#  end  
-  
+  	mail to: @email.email, subject: "How were the JavaScipt Fridge Magnets?"
+  end
+
+
+
   
 end
